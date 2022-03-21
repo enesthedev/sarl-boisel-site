@@ -2,13 +2,23 @@
 
 namespace App\Helpers;
 
-use App\Http\Kernel;
 use Illuminate\Support\Str;
 
 class LocalizationHelper
 {
     /**
-     * Gets a array list of Localization Middleware names.
+     * List of default Localization middlewares.
+     *
+     * @var array|string[]
+     */
+    protected static array $defaultMiddlewareNames = [
+        'session',
+        'redirect',
+        'view'
+    ];
+
+    /**
+     * Gets a array list of Localization middleware names.
      *
      * @return array
      */
@@ -17,12 +27,12 @@ class LocalizationHelper
         $middlewares = (new \App\Http\Kernel(app(), app('router')))
             ->getRouteMiddleware();
 
-        return array_filter(
+        return [...array_filter(
             array_map(
                 array(self::class, 'isLocalizedMiddleware'),
                 array_keys($middlewares)
             )
-        );
+        )];
     }
 
     /**
@@ -33,7 +43,7 @@ class LocalizationHelper
      */
     private static function isLocalizedMiddleware(string $middlewareName)
     {
-        return Str::endsWith($middlewareName, ['.localize'])
+        return (Str::endsWith($middlewareName, ['.localize']) && Str::contains($middlewareName, self::$defaultMiddlewareNames))
             ? $middlewareName
             : null;
     }
