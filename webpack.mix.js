@@ -11,7 +11,16 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.disableNotifications();
+mix.js('resources/js/runtime.js', 'public/scripts');
+mix.options({
+        processCssUrls: false
+    })
+    .postCss('resources/css/tailwind.css', 'public/styles/tailwind.css', [
+            require('tailwindcss'),
+            require('autoprefixer')
+        ]
+    );
+
+if (mix.inProduction())
+    mix.version();
