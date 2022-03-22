@@ -9,6 +9,9 @@ module.exports = {
             fontFamily: {
                 'inter': ['Inter', 'sans-serif'],
                 'roboto-slab': ['Roboto Slab', 'serif']
+            },
+            backgroundImage: {
+                'map-pattern': "url('/images/map_transparent.png')"
             }
         },
     },

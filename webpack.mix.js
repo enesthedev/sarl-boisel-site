@@ -25,5 +25,7 @@ mix.options({
         ]
     );
 
+mix.css('resources/css/rtl.css', 'public/styles/rtl.css');
+
 if (mix.inProduction())
     mix.version();
