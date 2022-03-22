@@ -2,13 +2,15 @@ module.exports = {
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
-        "./resources/**/*.vue",
-        "./node_modules/flowbite/**/*.js"
+        "./resources/**/*.vue"
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                'inter': ['Inter', 'sans-serif']
+            }
+        },
     },
     plugins: [
-        require('flowbite/plugin')
     ],
 }
