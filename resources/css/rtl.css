@@ -1,0 +1,3 @@
+body[dir="rtl"] .splide__slide {
+    transform: scaleX(-1);
+}
