@@ -12,7 +12,10 @@ const mix = require('laravel-mix');
  */
 
 mix.disableNotifications();
+
 mix.js('resources/js/runtime.js', 'public/scripts');
+mix.js('resources/js/alpine.js', 'public/scripts');
+
 mix.options({
         processCssUrls: false
     })
