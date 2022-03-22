@@ -26,3 +26,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // });
 
 window.Splide = require('@splidejs/splide/dist/js/splide.min')
+
+window.addEventListener('load', () => {
+    const loaders = document.getElementsByClassName('loader');
+    const loading = document.getElementsByClassName('loading-content')
+
+    for (let i = 0; i < loaders.length; i++) {
+        loaders[i].remove();
+        loading[i].removeAttribute('class');
+    }
+})
