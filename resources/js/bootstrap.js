@@ -25,7 +25,4 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: true
 // });
 
-/**
- * We need to load flowbite.js to application
- */
-require('flowbite/dist/flowbite')
+window.Splide = require('@splidejs/splide/dist/js/splide.min')
