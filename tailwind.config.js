@@ -11,7 +11,7 @@ module.exports = {
                 'roboto-slab': ['Roboto Slab', 'serif']
             },
             backgroundImage: {
-                'map-pattern': "url('/images/map_transparent.png')"
+                'map-pattern': "url('/images/map-pattern.webp')"
             }
         },
     },

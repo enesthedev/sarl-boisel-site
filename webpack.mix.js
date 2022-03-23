@@ -27,5 +27,10 @@ mix.options({
 
 mix.css('resources/css/rtl.css', 'public/styles/rtl.css');
 
+mix.copyDirectory(
+    'resources/images/',
+    'public/images/'
+)
+
 if (mix.inProduction())
     mix.version();
