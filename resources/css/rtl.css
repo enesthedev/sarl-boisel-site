@@ -1,3 +1,7 @@
-body[dir="rtl"] .splide__slide {
+html[dir="rtl"] body {
+    direction: rtl;
+}
+
+html[dir="rtl"] .splide__slide {
     transform: scaleX(-1);
 }

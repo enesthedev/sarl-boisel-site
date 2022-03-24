@@ -38,3 +38,18 @@
         src: url('/fonts/Roboto-Slab/RobotoSlab-Bold.woff2') format('woff2');
     }
 }
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    img {
+        pointer-events: none;
+        user-select: none;
+    }
+}
