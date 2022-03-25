@@ -11,7 +11,8 @@ module.exports = {
                 'roboto-slab': ['Roboto Slab', 'serif']
             },
             backgroundImage: {
-                'map-pattern': "url('/images/map-pattern.webp')"
+                'map-pattern': "url('/images/map-pattern.webp')",
+                'line-pattern': "url('https://img.freepik.com/free-vector/topographic-contour-lines-map-seamless-pattern_1284-52862.jpg')"
             }
         },
     },
